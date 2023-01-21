@@ -1,6 +1,7 @@
 package study;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -28,6 +29,7 @@ public class StringTest {
     }
 
     @Test
+    @DisplayName("문자열의 길이보다 큰 인덱스의 값을 가져 오려고 하면 IndexOutOfBoundsException 이 발생한다.")
     void charAt() {
         String actual = "1,2,3";
         assertThatThrownBy(() -> {
